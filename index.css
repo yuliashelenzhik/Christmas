@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Long+Cang&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    #03045e,
+    #003589,
+    #0060ab,
+    #008ac4,
+    #00b4d8
+  );
+}
+main {
+  overflow: hidden;
+}
+.elf,
+.tree,
+.presents,
+.maintree,
+.bgtrees,
+.snowlayer,
+.santa,
+.snowmen,
+.letters,
+.snowballs,
+.snowshapes,
+.snowflake {
+  position: absolute;
+  cursor: pointer;
+}
+.snowshapes,
+.snowballs {
+  pointer-events: none;
+}
+.snowlayer {
+  top: 50%;
+  object-fit: fill;
+  width: 100vw;
+  /* border: solid 2px yellow; */
+}
+.container {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  background: #f2f2f2;
+  /* background-image: linear-gradient(to bottom, #ecf2f3, #f2f2f2); */
+
+  /* z-index: 1000; */
+}
+.bgtrees {
+  bottom: 45%;
+  width: 100%;
+  max-height: 45%;
+}
+.maintree {
+  top: 15%;
+  bottom: 35%;
+  left: 20%;
+  width: 100%;
+  max-width: 40vw;
+  max-height: 70vh;
+  /* max-height: 55%; */
+  /* height: 50%; */
+  /* height: 40vw; */
+  /* object-fit: contain; */
+  /* border: solid 2px salmon; */
+}
+.tree {
+  bottom: 2%;
+  /* height: 100%; */
+  /* border: solid 2px violet; */
+  /* width: 100%; */
+  max-height: 50vh;
+
+  /* height: 100%; */
+}
+.elf {
+  bottom: 0;
+  left: -25%;
+  height: 40%;
+  /* border: solid 2px lightgreen; */
+}
+.presents {
+  bottom: 0;
+  height: 25%;
+  /* border: solid 2px blue; */
+  height: 20%;
+  /* width: 100%; */
+}
+.santa {
+  bottom: 15%;
+  right: 2%;
+  max-width: 90%;
+  max-height: 40vh;
+  /* border: solid 2px orange; */
+}
+.snowmen {
+  bottom: 2%;
+  left: 2%;
+  max-width: 50%;
+  max-height: 35%;
+}
+.credits {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.45rem;
+  width: 100%;
+  padding: 0.3rem;
+  text-align: center;
+  /* border: solid 2px red; */
+}
+a {
+  color: #003589;
+  text-decoration: none;
+}
+a:hover {
+  color: #008ac4;
+}
+.letters {
+  font-family: "Long Cang", cursive;
+  color: #f2f2f2;
+  top: 2rem;
+  right: 2rem;
+  transition: 0.5 linear;
+}
+.letters:hover {
+  transform: scale(1.1);
+}
+.snowflake {
+  top: 2rem;
+  left: 2rem;
+  width: 3rem;
+  transition: 0.5 linear;
+}
+.snowflake:hover {
+  transform: scale(1.1);
+}
+
+.snowballs {
+  background: url(/imgs/SVG/snowballs.svg);
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: animateOne 10s infinite linear;
+  opacity: 0.8;
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
+}
+@keyframes animateOne {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 100px 600px;
+  }
+}
+.snowshapes {
+  background: url(/imgs/SVG/snowshapes.svg);
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  top: 0;
+  left: 0;
+  animation: animateTwo 25s infinite linear;
+  opacity: 0;
+  /* opacity: 0.6;
+  visibility: hidden; */
+}
+.show2 {
+  opacity: 0.6;
+}
+@keyframes animateTwo {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -100px 600px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .elf {
+    left: -20%;
+    height: 50%;
+  }
+  .bgtrees {
+    bottom: 42%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .elf {
+    left: -14%;
+    height: 50%;
+  }
+  .bgtrees {
+    bottom: 40%;
+  }
+  .credits {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .elf {
+    left: -10%;
+    height: 50%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .elf {
+    left: -8%;
+    height: 50%;
+  }
+  .bgtrees {
+    bottom: 38%;
+  }
+}
